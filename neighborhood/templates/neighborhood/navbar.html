@@ -1,11 +1,11 @@
 <div class="nav_wrapper container-fluid">
     <nav class="container d-flex justify-content-between align-items-center">
         <div class="nav-section-left">
-            <div class="brand_logo">n</div>
+            <a class="brand_logo" href="{% url 'index' %}">n</a>
         </div>
         <div class="nav-section-right d-flex align-items-center">
             <ul class="d-flex text-uppercase">
-                <li class="ms-4"><a href="#">Feed</a></li>
+                <li class="ms-4"><a href="{% url 'feed' %}">Feed</a></li>
                 <li class="ms-4"><a href="#">Businesses</a></li>
                 <li class="ms-4"><a href="#">Neighborhood</a></li>
                 <li class="ms-4 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><a href="#">Account</a>

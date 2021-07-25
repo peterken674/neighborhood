@@ -14,6 +14,7 @@ html {
 body {
   width: 100%;
   overflow-x: hidden;
+  background-color: #FAFAFA;
 }
 
 a {
@@ -143,6 +144,8 @@ footer {
   width: 100%;
   background-color: #FAFAFA;
   height: 60px;
+  -webkit-box-shadow: 0 0 10px -5px #5a5a5a;
+          box-shadow: 0 0 10px -5px #5a5a5a;
 }
 
 .nav_wrapper .container {
@@ -158,6 +161,7 @@ footer {
   color: #6751B2;
   font-size: 3rem;
   line-height: 1;
+  cursor: pointer;
 }
 
 .nav_wrapper .container .nav-section-right {

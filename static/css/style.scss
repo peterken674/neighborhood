@@ -33,6 +33,7 @@ html{
 body{
     width: 100%;
     overflow-x: hidden;
+    background-color: $offWhite;
 }
 a{
     color: $mainColor;
@@ -134,6 +135,7 @@ footer{
     width: 100%;
     background-color: $offWhite;
     height: 60px;
+    box-shadow: 0 0 10px -5px $grey;
     .container{
         height: 100%;
         .nav-section-left{
@@ -143,6 +145,7 @@ footer{
                 color: $mainColor;
                 font-size: 3rem;
                 line-height: 1;
+                cursor: pointer;
             }
         }
         .nav-section-right{
@@ -157,3 +160,5 @@ footer{
         }
     }
 }
+
+
