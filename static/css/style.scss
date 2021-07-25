@@ -3,7 +3,7 @@
 $mainColor: #6751B2;
 $bgMainColor: #6751b226;
 $accentColor: #E75E88;
-$grey: #614e4e;
+$grey: rgb(90, 90, 90);
 $black: #202020;
 $offWhite: #FAFAFA;
 $white: #FFFFFF;
@@ -37,7 +37,6 @@ body{
 
 // Index
 main{
-    height: 100vh;
     header{
         background-image: url('../img/bg.jpg');
         background-blend-mode: darken;
@@ -45,7 +44,7 @@ main{
         background-size: cover;
         background-repeat: no-repeat;
         text-align: center;
-        height: 65vh;
+        height: 55vh;
         color: $white;
         #headerContent{
             display: flex;
@@ -84,4 +83,41 @@ main{
         }
 
         }
+        .descriptions{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            text-align: center;
+            padding-left: 10rem;
+            padding-right: 10rem;
+            #updates, 
+            #businesses, 
+            #info{
+                padding: $padding;
+                .descHeading{
+                    font-weight: 700;
+                    color: $mainColor;
+                }
+                .descIcon{
+                    font-size: 4rem;
+                    i{
+                        color: $grey;
+                        opacity: .5;
+                    }
+                }
+                .descText{
+                    font-size: .8rem;
+                    color: $grey;
+                }
+            }
+        }
     }
+
+
+footer{
+    position: absolute;
+    width: 100%;
+    height: 5vh;
+    background-color: $mainColor;
+    bottom: 0;
+}
