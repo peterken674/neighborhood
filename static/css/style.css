@@ -1,1 +1,82 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url(https://fonts.googleapis.com/css?family=Rowdies:300,regular,700);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  height: 100vh;
+}
+
+main header {
+  background-image: url("../img/bg.jpg");
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 65vh;
+  color: #FFFFFF;
+}
+
+main header #headerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(69, 37, 172, 0.5);
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+}
+
+main header #headerContent .container > * {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+main header #headerContent #headerHeading {
+  color: #FAFAFA;
+  font-family: 'Rowdies', serif;
+  font-size: 5rem;
+}
+
+main header #headerContent #headerCTA {
+  text-transform: uppercase;
+}
+
+main header #headerContent #headerCTA #signUpButton {
+  border-radius: 5px;
+  background-color: #E75E88;
+  border: 1px solid #E75E88;
+}
+
+main header #headerContent #headerCTA #signInButton {
+  border-radius: 5px;
+  color: #E75E88;
+  border: 1px solid #E75E88;
+}
+
+main header #headerContent #headerCTA #signInButton:hover {
+  background-color: #E75E88;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

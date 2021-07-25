@@ -1,7 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Rowdies:300,regular,700);
+// Colors
 $mainColor: #6751B2;
 $bgMainColor: #6751b226;
 $accentColor: #E75E88;
-$grey: #606060;
+$grey: #614e4e;
 $black: #202020;
 $offWhite: #FAFAFA;
 $white: #FFFFFF;
@@ -11,3 +13,75 @@ $success: #A2FCAB;
 $bgSuccess: #A2FCAB26;
 $danger: #FCA2A2;
 $bgDanger: #FCA2A226;
+
+// Padding
+$padding: 2rem;
+
+// Rounding
+$borderRadius: 5px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans',
+    sans-serif;
+}
+html{
+    font-size: 18px;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+// Index
+main{
+    height: 100vh;
+    header{
+        background-image: url('../img/bg.jpg');
+        background-blend-mode: darken;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        height: 65vh;
+        color: $white;
+        #headerContent{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba(69, 37, 172, 0.5);
+            height: 100%;
+            width: 100%;
+            padding: $padding;
+            .container>*{
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+            #headerHeading{
+                color: $offWhite;
+                font-family: 'Rowdies', serif;
+                font-size: 5rem;     
+            }
+            #headerCTA{
+                text-transform: uppercase;
+                #signUpButton{
+                    border-radius: $borderRadius;
+                    background-color: $accentColor;
+                    border: 1px solid $accentColor;
+                }
+                #signInButton{
+                    border-radius: $borderRadius;
+                    color: $accentColor;
+                    border: 1px solid $accentColor;
+                    &:hover{
+                        background-color: $accentColor;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        }
+    }
