@@ -25,6 +25,10 @@ li {
   list-style: none;
 }
 
+main {
+  width: 100%;
+}
+
 main header {
   background-image: url("../img/bg.jpg");
   background-blend-mode: darken;
@@ -33,6 +37,7 @@ main header {
   background-repeat: no-repeat;
   text-align: center;
   height: 55vh;
+  width: 100%;
   color: #FFFFFF;
 }
 
@@ -86,15 +91,7 @@ main header #headerContent #headerCTA #signInButton:hover {
 }
 
 main .descriptions {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
   text-align: center;
-  padding-left: 10rem;
-  padding-right: 10rem;
 }
 
 main .descriptions #updates,
