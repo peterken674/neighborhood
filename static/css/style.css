@@ -148,13 +148,14 @@ main .descriptions #info .descText {
 footer {
   position: fixed;
   width: 100%;
-  height: 5vh;
+  height: 3vh;
   background-color: #6751B2;
   bottom: 0;
 }
 
 .nav_wrapper {
   position: fixed;
+  z-index: 1000;
   width: 100%;
   background-color: #FAFAFA;
   height: 60px;
@@ -191,7 +192,8 @@ footer {
   text-transform: capitalize;
 }
 
-#feed #neighborhoodName, #bs #neighborhoodName {
+#feed #neighborhoodName,
+#bs #neighborhoodName {
   background-color: #6751B2;
   color: #FFFFFF;
   font-size: 1.2 rem;
@@ -199,7 +201,8 @@ footer {
   z-index: -10;
 }
 
-#feed #newPostBtn, #bs #newPostBtn {
+#feed #newPostBtn,
+#bs #newPostBtn {
   background-color: #FFFFFF;
   border: none;
   color: #6751B2;
@@ -208,56 +211,67 @@ footer {
   padding: 10px;
 }
 
-#feed #newPostBtn:hover, #bs #newPostBtn:hover {
+#feed #newPostBtn:hover,
+#bs #newPostBtn:hover {
   -webkit-box-shadow: -3px 3px 10px -8px #5a5a5a;
           box-shadow: -3px 3px 10px -8px #5a5a5a;
 }
 
-#feed #newPostBtn i, #bs #newPostBtn i {
+#feed #newPostBtn i,
+#bs #newPostBtn i {
   color: #6751B2;
   background-color: #6751b226;
   border-radius: 2px;
   padding: 5px;
 }
 
-#feed #posts .post .post-title, #bs #posts .post .post-title {
+#feed #posts .post .post-title,
+#bs #posts .post .post-title {
   color: #202020;
 }
 
-#feed #posts .post .post-title i, #bs #posts .post .post-title i {
+#feed #posts .post .post-title i,
+#bs #posts .post .post-title i {
   color: #FCD8A2;
   background-color: #FCD8A226;
   padding: 5px;
   border-radius: 2px;
 }
 
-#feed #posts .post .post-content, #bs #posts .post .post-content {
+#feed #posts .post .post-content,
+#bs #posts .post .post-content {
   font-size: .85rem;
   color: #5a5a5a;
 }
 
-#feed #posts .post .post-footer, #bs #posts .post .post-footer {
+#feed #posts .post .post-footer,
+#bs #posts .post .post-footer {
   font-size: .75rem;
   font-style: italic;
   font-weight: 600;
 }
 
-#feed #posts .post .post-footer .post-user .profile-pic, #bs #posts .post .post-footer .post-user .profile-pic {
+#feed #posts .post .post-footer .post-user .profile-pic,
+#bs #posts .post .post-footer .post-user .profile-pic {
   height: 25px;
   width: 25px;
   overflow: hidden;
   border-radius: 5px;
 }
 
-#feed #posts .post .post-footer .post-user .profile-pic img, #bs #posts .post .post-footer .post-user .profile-pic img {
+#feed #posts .post .post-footer .post-user .profile-pic img,
+#bs #posts .post .post-footer .post-user .profile-pic img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+#businesses > div {
+  max-height: 150px;
+}
+
 #businesses .business-image {
   width: 20%;
-  min-height: 100%;
 }
 
 #businesses .business-image img {
@@ -273,5 +287,60 @@ footer {
 
 #businesses .business-text i {
   color: #6751B2;
+}
+
+#neighborhood {
+  margin-bottom: 5vh;
+}
+
+#neighborhood .card .neighborhoodHeader {
+  background-color: #6751B2;
+  margin-top: 0;
+}
+
+#neighborhood .card .neighborhoodHeader p {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+#neighborhood .card #neighborhoodCover {
+  height: 350px;
+  overflow: hidden;
+}
+
+#neighborhood .card #neighborhoodCover img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top !important;
+     object-position: top !important;
+}
+
+#neighborhood .card #neighborhoodText {
+  font-size: .85rem;
+  color: #5a5a5a;
+}
+
+#neighborhood .card #neighborhoodContacts {
+  color: #5a5a5a;
+  line-height: 1;
+}
+
+#neighborhood .card #neighborhoodContacts strong {
+  color: #202020;
+}
+
+#neighborhood .card #neighborhoodContacts i {
+  color: #FCA2A2 !important;
+}
+
+#neighborhood .card #neighbors i {
+  font-size: 1rem;
+  color: #6751B2;
+  border-radius: 5px;
+  max-width: 20px;
+  opacity: .7;
 }
 /*# sourceMappingURL=style.css.map */

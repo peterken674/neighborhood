@@ -23,3 +23,12 @@ def businesses(request):
 
     return render(request, 'neighborhood/businesses.html', context)
 
+def neighborhood(request):
+
+    title = 'Neighborhood'
+    context = {
+        'title': title,
+    }
+
+    return render(request, 'neighborhood/neighborhood.html', context)
+

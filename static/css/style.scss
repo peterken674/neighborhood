@@ -23,33 +23,39 @@ $borderRadius: 5px;
 // Box shadow
 $boxShadow: -3px 3px 10px -8px $grey;
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans',
-    sans-serif;
+        sans-serif;
     transition: 300ms;
 }
-html{
+
+html {
     font-size: 16px;
 }
-body{
+
+body {
     width: 100%;
     overflow-x: hidden;
     background-color: $offWhite;
 }
-a{
+
+a {
     color: $mainColor;
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
-main{
+
+main {
     padding-top: 60px !important;
 }
-.card{
+
+.card {
     border-radius: $borderRadius;
     box-shadow: $boxShadow;
     overflow: hidden;
@@ -57,9 +63,10 @@ main{
 }
 
 // Index
-main{
+main {
     width: 100%;
-    header{
+
+    header {
         background-image: url('../img/bg.jpg');
         background-blend-mode: darken;
         background-position: center;
@@ -69,7 +76,8 @@ main{
         height: 55vh;
         width: 100%;
         color: $white;
-        #headerContent{
+
+        #headerContent {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -77,27 +85,33 @@ main{
             height: 100%;
             width: 100%;
             padding: $padding;
-            .container>*{
+
+            .container>* {
                 margin-top: 2rem;
                 margin-bottom: 2rem;
             }
-            #headerHeading{
+
+            #headerHeading {
                 color: $offWhite;
                 font-family: 'Rowdies', serif;
-                font-size: 5rem;     
+                font-size: 5rem;
             }
-            #headerCTA{
+
+            #headerCTA {
                 text-transform: uppercase;
-                #signUpButton{
+
+                #signUpButton {
                     border-radius: $borderRadius;
                     background-color: $accentColor;
                     border: 1px solid $accentColor;
                 }
-                #signInButton{
+
+                #signInButton {
                     border-radius: $borderRadius;
                     color: $accentColor;
                     border: 1px solid $accentColor;
-                    &:hover{
+
+                    &:hover {
                         background-color: $accentColor;
                         color: white;
                     }
@@ -105,55 +119,65 @@ main{
             }
         }
 
-        }
-        .descriptions{
-            text-align: center;
-            #updates, 
-            #businesses, 
-            #info{
-                padding: $padding;
-                .descHeading{
-                    font-weight: 700;
-                    color: $mainColor;
-                    text-transform: uppercase;
-                }
-                .descIcon{
-                    font-size: 4rem;
-                    i{
-                        color: $grey;
-                        opacity: .5;
-                    }
-                }
-                .descText{
-                    font-size: .8rem;
+    }
+
+    .descriptions {
+        text-align: center;
+
+        #updates,
+        #businesses,
+        #info {
+            padding: $padding;
+
+            .descHeading {
+                font-weight: 700;
+                color: $mainColor;
+                text-transform: uppercase;
+            }
+
+            .descIcon {
+                font-size: 4rem;
+
+                i {
                     color: $grey;
-                    text-align: justify;
-                    text-justify: auto;
+                    opacity: .5;
                 }
+            }
+
+            .descText {
+                font-size: .8rem;
+                color: $grey;
+                text-align: justify;
+                text-justify: auto;
             }
         }
     }
+}
 
 
-footer{
+footer {
     position: fixed;
     width: 100%;
-    height: 5vh;
+    height: 3vh;
     background-color: $mainColor;
     bottom: 0;
 }
 
-.nav_wrapper{
+.nav_wrapper {
     position: fixed;
+    z-index: 1000;
     width: 100%;
     background-color: $offWhite;
     height: 60px;
     box-shadow: 0 0 10px -5px $grey;
-    .container{
+
+    .container {
         height: 100%;
-        .nav-section-left{
+
+        .nav-section-left {
             height: 100%;
-            .brand_logo{
+
+            .brand_logo {
                 font-family: 'Rowdies', serif;
                 color: $mainColor;
                 font-size: 3rem;
@@ -161,27 +185,32 @@ footer{
                 cursor: pointer;
             }
         }
-        .nav-section-right{
+
+        .nav-section-right {
             height: 100%;
-            ul{
+
+            ul {
                 margin-top: 1rem;
                 font-size: .8rem;
             }
-            .dropdown-menu{
+
+            .dropdown-menu {
                 text-transform: capitalize;
             }
         }
     }
 }
 
-#feed, #bs{
-    #neighborhoodName{
+#feed,
+#bs {
+    #neighborhoodName {
         background-color: $mainColor;
         color: $white;
         font-size: 1.2 rem;
-        font-weight: 700;   
+        font-weight: 700;
         z-index: -10;
     }
+
     #newPostBtn {
         background-color: $white;
         border: none;
@@ -189,10 +218,12 @@ footer{
         text-transform: uppercase;
         border-radius: $borderRadius;
         padding: 10px;
-        &:hover{
+
+        &:hover {
             box-shadow: $boxShadow;
         }
-        i{
+
+        i {
             color: $mainColor;
             background-color: $bgMainColor;
             border-radius: 2px;
@@ -200,32 +231,38 @@ footer{
         }
 
     }
-    #posts{
-        .post{
-            .post-title{
+
+    #posts {
+        .post {
+            .post-title {
                 color: $black;
-                i{
+
+                i {
                     color: $alert;
                     background-color: $bgAlert;
                     padding: 5px;
                     border-radius: 2px;
                 }
             }
-            .post-content{
+
+            .post-content {
                 font-size: .85rem;
                 color: $grey;
             }
-            .post-footer{
+
+            .post-footer {
                 font-size: .75rem;
                 font-style: italic;
                 font-weight: 600;
-                .post-user{
-                    .profile-pic{
+
+                .post-user {
+                    .profile-pic {
                         height: 25px;
                         width: 25px;
                         overflow: hidden;
                         border-radius: $borderRadius;
-                        img{
+
+                        img {
                             width: 100%;
                             object-fit: cover;
                         }
@@ -236,20 +273,77 @@ footer{
     }
 }
 
-#businesses{
-    .business-image{
+#businesses {
+    &>div{
+        max-height: 150px;
+    }
+    .business-image {
         width: 20%;
-        min-height: 100%;
-        img{
+
+        img {
             width: 100%;
             object-fit: cover;
         }
     }
-    .business-text{
+
+    .business-text {
         color: $grey;
         font-size: .85rem;
-        i{
+
+        i {
             color: $mainColor;
+        }
+    }
+}
+
+#neighborhood {
+    margin-bottom: 5vh;
+    .card {
+        .neighborhoodHeader {
+            background-color: $mainColor;
+            margin-top: 0;
+            p {
+                color: white;
+                font-weight: 600;
+                font-size: 1.2rem;
+                line-height: 1;
+                margin-top: 10px;
+            }
+        }
+
+        #neighborhoodCover {
+            height: 350px;
+            overflow: hidden;
+
+            img {
+                object-fit: contain;
+                object-position: top !important;
+            }
+        }
+
+        #neighborhoodText{
+            font-size: .85rem;
+            color: $grey;
+        }
+
+        #neighborhoodContacts {
+            color: $grey;
+            line-height: 1;
+            strong{
+                color: $black;
+            }
+            i{
+                color: $danger !important;
+            }
+        }
+        #neighbors{
+            i{
+                font-size: 1rem;
+                color: $mainColor;
+                border-radius: $borderRadius;
+                max-width: 20px;
+                opacity: .7;
+            }
         }
     }
 }

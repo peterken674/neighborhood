@@ -1,0 +1,87 @@
+{% extends 'neighborhood/base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+
+{% block content %}
+<main class="container" id="neighborhood">
+    <div class="card mt-3">
+        <div class="neighborhoodHeader py-2 px-3">
+            <p>Gallow Estate</p>
+        </div>
+        <div id="neighborhoodCover">
+            <img src="{% static 'img/neighborhood1.jpg'%}" alt="Neighborhood Image" class="img-fluid">
+        </div>
+        <div id="neighborhoodText" class="m-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis architecto sit in quia rem debitis, pariatur, tempora eaque deserunt ducimus, rerum quam dolorum. Incidunt veritatis nemo autem repellat quis saepe.</div>
+    </div>
+    
+
+    <div class="card mt-3">
+        <div class="neighborhoodHeader py-2 px-3">
+            <p>Emergency Contacts</p>
+        </div>
+        <div id="neighborhoodContacts" class="row p-4">
+            <div class="col-4">
+                <p><strong>William Kenyatta, <br>Manager</strong></p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> +254 701 234 567</p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i> williamk@mail.com</p>
+            </div>
+            <div class="col-4">
+                <p><strong>Gallow Police Station, <br>Juja
+                    </strong></p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> +254 701 234 567</p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i> williamk@mail.com</p>
+            </div>
+            <div class="col-4">
+                <p><strong>Gallow Hospital, <br>Juja</strong></p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> +254 701 234 567</p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i> williamk@mail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card my-3">
+        <div class="neighborhoodHeader py-2 px-3">
+            <p>Neighbors</p>
+        </div>
+        <div id="neighbors" class="row p-4">
+            <div class="col-4">
+                <p><strong>William Kenyatta, Mr. </strong></p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> +254 701 234 567</p>
+                <p><i class="fa fa-home" aria-hidden="true"></i> A7, Phase 3</p>
+            </div>
+            <div class="col-4">
+                <p><strong>William Kenyatta, Mr. </strong></p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> +254 701 234 567</p>
+                <p><i class="fa fa-home" aria-hidden="true"></i> A7, Phase 3</p>
+            </div>
+            <div class="col-4">
+                <p><strong>William Kenyatta, Mr. </strong></p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> +254 701 234 567</p>
+                <p><i class="fa fa-home" aria-hidden="true"></i> A7, Phase 3</p>
+            </div>
+            <div class="col-4">
+                <p><strong>William Kenyatta, Mr. </strong></p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> +254 701 234 567</p>
+                <p><i class="fa fa-home" aria-hidden="true"></i> A7, Phase 3</p>
+            </div>
+            <div class="col-4">
+                <p><strong>William Kenyatta, Mr. </strong></p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> +254 701 234 567</p>
+                <p><i class="fa fa-home" aria-hidden="true"></i> A7, Phase 3</p>
+            </div>
+            <div class="col-4">
+                <p><strong>William Kenyatta, Mr. </strong></p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> +254 701 234 567</p>
+                <p><i class="fa fa-home" aria-hidden="true"></i> A7, Phase 3</p>
+            </div>
+            <div class="col-4">
+                <p><strong>William Kenyatta, Mr. </strong></p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> +254 701 234 567</p>
+                <p><i class="fa fa-home" aria-hidden="true"></i> A7, Phase 3</p>
+            </div>
+            
+        </div>
+    </div>
+</main>
+{%endblock%}
