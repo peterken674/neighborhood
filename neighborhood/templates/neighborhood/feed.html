@@ -4,5 +4,26 @@
 
 
 {% block content %}
+<main class="container" id="feed">
+    <div id="neighborhoodName" class="my-3 p-2 card">Gallow Estate</div>
+    <a id="newPostBtn" class="btn btn-primary btn-sm " href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> New Post</a>
 
+    <section id="posts">
+        <div class="card post mt-3 p-3">
+            <div class="post-title mb-2"><i class="fa fa-bell me-2" aria-hidden="true"></i><strong>Remember to take out the trash before Tuesday.</strong></div>
+            <div class="post-content mb-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam officia pariatur. A enim animi velit, doloribus, debitis pariatur esse maxime ad est sunt maiores quos, provident hic unde optio.
+            </div>
+            <div class="post-footer d-flex justify-content-between align-items-end">
+                <div class="post-user d-flex align-items-end">
+                    <div class="profile-pic">
+                        <img src="{% static 'img/profile.jpg'%}" alt="" class="img-fluid img-responsive">
+                    </div>
+                    <div class="profile-name mx-2">Peter Kennedy</div>
+                </div>
+                <div class="post-date">2 hours ago</div>
+            </div>
+        </div>
+    </section>
+</main>
 {%endblock%}

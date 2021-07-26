@@ -27,6 +27,17 @@ li {
 }
 
 main {
+  padding-top: 60px !important;
+}
+
+.card {
+  border-radius: 5px;
+  -webkit-box-shadow: -3px 3px 10px -8px #5a5a5a;
+          box-shadow: -3px 3px 10px -8px #5a5a5a;
+  border: none;
+}
+
+main {
   width: 100%;
 }
 
@@ -175,5 +186,64 @@ footer {
 
 .nav_wrapper .container .nav-section-right .dropdown-menu {
   text-transform: capitalize;
+}
+
+#feed #neighborhoodName {
+  background-color: #6751B2;
+  color: #FFFFFF;
+  font-size: 1.2 rem;
+  font-weight: 700;
+}
+
+#feed #newPostBtn {
+  background-color: #FFFFFF;
+  border: none;
+  color: #6751B2;
+  text-transform: uppercase;
+  border-radius: 5px;
+  -webkit-box-shadow: -3px 3px 10px -8px #5a5a5a;
+          box-shadow: -3px 3px 10px -8px #5a5a5a;
+}
+
+#feed #newPostBtn i {
+  color: #6751B2;
+  background-color: #6751b226;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+#feed #posts .post .post-title {
+  color: #202020;
+}
+
+#feed #posts .post .post-title i {
+  color: #FCD8A2;
+  background-color: #FCD8A226;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+#feed #posts .post .post-content {
+  font-size: .85rem;
+  color: #5a5a5a;
+}
+
+#feed #posts .post .post-footer {
+  font-size: .75rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+#feed #posts .post .post-footer .post-user .profile-pic {
+  height: 25px;
+  width: 25px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+#feed #posts .post .post-footer .post-user .profile-pic img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */
