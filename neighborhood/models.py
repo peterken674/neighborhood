@@ -13,8 +13,8 @@ class Neighborhood(models.Model):
     name = models.CharField(max_length=50)
     location = models.CharField(max_length=50)
     description = models.TextField()
-    health_tell = models.IntegerField(null=True, blank=True)
-    police_number = models.IntegerField(null=True, blank=True)
+    hospital_number = models.CharField(max_length=20, blank=True)
+    police_number = models.CharField(max_length=20, blank=True)
 
     @property
     def occupants_count(self):
@@ -39,15 +39,17 @@ class Neighborhood(models.Model):
 
 class Gender(models.Model):
     name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
         
 class Profile(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE,related_name='profile') 
-    name = models.CharField(max_length=50)
     house = models.CharField(max_length=50)
     phase = models.CharField(max_length=50)
     phone = models.CharField(max_length=50)
     gender = models.ForeignKey(Gender, on_delete=models.CASCADE, null=True)
-    profile_picture = CloudinaryField('image')
+    profile_picture = CloudinaryField('image', default='image/upload/v1626430054/default_zogkvr.png')
 
     neighborhood = models.ForeignKey(Neighborhood,on_delete=models.SET_NULL, null=True,related_name='neighbors',blank=True)
 
@@ -75,6 +77,7 @@ class Business(models.Model):
     end_day = models.CharField(max_length=50)
     open_time = models.TimeField()
     close_time = models.TimeField()
+    bs_image = CloudinaryField('images', default='image/upload/v1627341811/company_default_qb4ili.png')
 
     user=models.ForeignKey(Profile, on_delete=models.CASCADE) 
     neighborhood = models.ForeignKey(Neighborhood, on_delete=models.CASCADE)
@@ -99,6 +102,9 @@ class Business(models.Model):
 
 class PostType(models.Model):
     name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
 
 class Post(models.Model):
     title = models.CharField(max_length=120, null=True)

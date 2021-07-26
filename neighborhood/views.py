@@ -1,31 +1,43 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from . import models
 from .forms import CreateUserForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+
 
 
 def index(request):
 
     return render(request, 'neighborhood/index.html')
 
+@login_required(login_url='login')
 def feed(request):
+    current_user = request.user.profile
+    posts = models.Post.objects.filter(hood=current_user.neighborhood)
 
     title = 'Feed'
     context = {
         'title': title,
+        'posts': posts,
     }
 
     return render(request, 'neighborhood/feed.html',context)
 
+@login_required(login_url='login')
 def businesses(request):
+    current_user = request.user.profile
+    businesses = models.Business.objects.filter(neighborhood=current_user.neighborhood)
 
     title = 'Businesses'
     context = {
         'title': title,
+        'businesses':businesses,
     }
 
     return render(request, 'neighborhood/businesses.html', context)
 
+@login_required(login_url='login')
 def neighborhood(request):
 
     title = 'Neighborhood'
@@ -35,6 +47,7 @@ def neighborhood(request):
 
     return render(request, 'neighborhood/neighborhood.html', context)
 
+@login_required(login_url='login')
 def profile(request):
 
     title = 'Profile'
@@ -76,11 +89,17 @@ def login_user(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('/')
+                nxt = request.GET.get("next", None)
+                url = '/auth/login/'
+                if nxt is not None:
+                    url += '?next=' + nxt
+
+                return redirect(url)
+
             else:
                 messages.info(request, 'Username or password is incorrect.')
-
-    context = {}
+    title = 'Login'
+    context = {'title':title}
     return render(request, 'auth/login.html', context)
 
 def logout_user(request):

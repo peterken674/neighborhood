@@ -9,21 +9,23 @@
     <a id="newPostBtn" class="btn btn-primary btn-sm " href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> New Post</a>
 
     <section id="posts">
+        {% for post in posts %}
         <div class="card post mt-3 p-3">
-            <div class="post-title mb-2"><i class="fa fa-bell me-2" aria-hidden="true"></i><strong>Remember to take out the trash before Tuesday.</strong></div>
+            <div class="post-title mb-2"><i class="fa fa-bell me-2" aria-hidden="true"></i><strong>{{ post.title }}</strong></div>
             <div class="post-content mb-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam officia pariatur. A enim animi velit, doloribus, debitis pariatur esse maxime ad est sunt maiores quos, provident hic unde optio.
+                {{ post.post }}
             </div>
             <div class="post-footer d-flex justify-content-between align-items-end">
                 <div class="post-user d-flex align-items-end">
                     <div class="profile-pic">
-                        <img src="{% static 'img/profile.jpg'%}" alt="" class="img-fluid img-responsive">
+                        <img src="{{ post.user.profile_picture.url }}" alt="" class="img-fluid img-responsive">
                     </div>
-                    <div class="profile-name mx-2">Peter Kennedy</div>
+                    <div class="profile-name mx-2">{{ post.user.user.first_name}} {{ post.user.user.last_name}}</div>
                 </div>
-                <div class="post-date">2 hours ago</div>
+                <div class="post-date">{{ post.date | timesince }} ago</div>
             </div>
         </div>
+        {% endfor %}
     </section>
 </main>
 {%endblock%}
