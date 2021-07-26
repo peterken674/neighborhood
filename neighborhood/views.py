@@ -7,5 +7,19 @@ def index(request):
 
 def feed(request):
 
-    return render(request, 'neighborhood/feed.html')
+    title = 'Feed'
+    context = {
+        'title': title,
+    }
+
+    return render(request, 'neighborhood/feed.html',context)
+
+def businesses(request):
+
+    title = 'Businesses'
+    context = {
+        'title': title,
+    }
+
+    return render(request, 'neighborhood/businesses.html', context)
 

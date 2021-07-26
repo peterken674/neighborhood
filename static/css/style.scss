@@ -29,9 +29,10 @@ $boxShadow: -3px 3px 10px -8px $grey;
     box-sizing: border-box;
     font-family: 'Open Sans',
     sans-serif;
+    transition: 300ms;
 }
 html{
-    font-size: 18px;
+    font-size: 16px;
 }
 body{
     width: 100%;
@@ -185,7 +186,9 @@ footer{
         color: $mainColor;
         text-transform: uppercase;
         border-radius: $borderRadius;
-        box-shadow: $boxShadow;
+        &:hover{
+            box-shadow: $boxShadow;
+        }
         i{
             color: $mainColor;
             background-color: $bgMainColor;

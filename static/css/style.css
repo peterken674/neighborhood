@@ -5,10 +5,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
@@ -201,6 +203,9 @@ footer {
   color: #6751B2;
   text-transform: uppercase;
   border-radius: 5px;
+}
+
+#feed #newPostBtn:hover {
   -webkit-box-shadow: -3px 3px 10px -8px #5a5a5a;
           box-shadow: -3px 3px 10px -8px #5a5a5a;
 }
