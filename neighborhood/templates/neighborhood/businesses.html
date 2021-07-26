@@ -4,13 +4,22 @@
 
 
 {% block content %}
-<main class="container" id="feed">
+<main class="container" id="bs">
     <div id="neighborhoodName" class="my-3 p-2 card">Gallow Estate</div>
     <a id="newPostBtn" class="btn btn-primary btn-sm " href="#" role="button"><i class="fa fa-pencil"
             aria-hidden="true"></i> Add Business</a>
 
     <section id="businesses">
-        
+        <div class="card d-flex flex-row align-items-center mt-3">
+            <div class="business-image me-3">
+                <img src="{% static 'img/profile.jpg'%}" alt="Business Image" class="img-fluid img-responsive">
+            </div>
+            <div class="business-text">
+                <p><strong>Toyzz Shop</strong></p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> +254 701 234 567</p>
+                <p><i class="fa fa-clock" aria-hidden="true"></i> Mon-Sat, 7.00am - 8.30pm</p>
+            </div>
+        </div>
     </section>
 </main>
 {%endblock%}

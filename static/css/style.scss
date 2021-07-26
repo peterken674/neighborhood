@@ -52,6 +52,7 @@ main{
 .card{
     border-radius: $borderRadius;
     box-shadow: $boxShadow;
+    overflow: hidden;
     border: none;
 }
 
@@ -173,12 +174,13 @@ footer{
     }
 }
 
-#feed{
+#feed, #bs{
     #neighborhoodName{
         background-color: $mainColor;
         color: $white;
         font-size: 1.2 rem;
         font-weight: 700;   
+        z-index: -10;
     }
     #newPostBtn {
         background-color: $white;
@@ -186,6 +188,7 @@ footer{
         color: $mainColor;
         text-transform: uppercase;
         border-radius: $borderRadius;
+        padding: 10px;
         &:hover{
             box-shadow: $boxShadow;
         }
@@ -233,3 +236,20 @@ footer{
     }
 }
 
+#businesses{
+    .business-image{
+        width: 20%;
+        min-height: 100%;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .business-text{
+        color: $grey;
+        font-size: .85rem;
+        i{
+            color: $mainColor;
+        }
+    }
+}
