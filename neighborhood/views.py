@@ -32,3 +32,12 @@ def neighborhood(request):
 
     return render(request, 'neighborhood/neighborhood.html', context)
 
+def profile(request):
+
+    title = 'Profile'
+    context = {
+        'title': title,
+    }
+
+    return render(request, 'neighborhood/profile.html', context)
+
