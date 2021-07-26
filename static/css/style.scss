@@ -348,3 +348,64 @@ footer {
         }
     }
 }
+
+#profile{
+    .profile-header{
+        background-color: $mainColor;
+        margin-top: 0;
+
+        p {
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 1;
+            margin-top: 10px;
+        }
+    }
+    .profile-body{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        #profileButton {
+            background-color: $mainColor;
+            text-transform: uppercase;
+            border: 1px solid $mainColor;
+            border-radius: $borderRadius;
+        }
+        .profile-pic{
+            width: 200px;
+            height: 200px;
+            max-width: 300px;
+            overflow: hidden;
+            border-radius: $borderRadius;
+            // @media screen and (min-width: 768px) {
+            //     &{
+            //         margin-left: 10%;
+            //     }
+            // }
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+            
+        }
+        .details {
+            width: 100%;
+            li{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                
+                b{
+                    color: $mainColor;
+                    text-align: right;
+                    display: inline-flex;
+                    width: 100%;
+                    position: relative;
+                    padding-right: 10px;
+                }
+            }
+            
+        }
+    }
+}
+

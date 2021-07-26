@@ -345,4 +345,69 @@ footer {
   max-width: 20px;
   opacity: .7;
 }
+
+#profile .profile-header {
+  background-color: #6751B2;
+  margin-top: 0;
+}
+
+#profile .profile-header p {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+#profile .profile-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+#profile .profile-body #profileButton {
+  background-color: #6751B2;
+  text-transform: uppercase;
+  border: 1px solid #6751B2;
+  border-radius: 5px;
+}
+
+#profile .profile-body .profile-pic {
+  width: 200px;
+  height: 200px;
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+#profile .profile-body .profile-pic img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#profile .profile-body .details {
+  width: 100%;
+}
+
+#profile .profile-body .details li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#profile .profile-body .details li b {
+  color: #6751B2;
+  text-align: right;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  position: relative;
+  padding-right: 10px;
+}
 /*# sourceMappingURL=style.css.map */
