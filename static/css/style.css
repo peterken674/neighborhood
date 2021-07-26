@@ -410,4 +410,26 @@ footer {
   position: relative;
   padding-right: 10px;
 }
+
+.auth input {
+  border: 1px solid #5a5a5a;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: .5rem;
+}
+
+.auth button {
+  background-color: #6751B2;
+  border: 1px solid #6751B2;
+  border-radius: 5px;
+}
+
+.auth button:hover {
+  background-color: #6751B2;
+  -webkit-box-shadow: -3px 3px 10px -8px #5a5a5a;
+          box-shadow: -3px 3px 10px -8px #5a5a5a;
+  outline: none;
+}
 /*# sourceMappingURL=style.css.map */

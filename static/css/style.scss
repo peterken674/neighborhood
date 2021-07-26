@@ -409,3 +409,23 @@ footer {
     }
 }
 
+.auth {
+    input{
+    border: 1px solid $grey;
+    border-radius:  $borderRadius;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+button{
+    background-color: $mainColor;
+    border: 1px solid $mainColor;
+    border-radius: $borderRadius;
+    &:hover{
+        background-color: $mainColor;
+        box-shadow: $boxShadow;
+        outline: none;
+    }
+}
+}

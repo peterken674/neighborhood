@@ -1,0 +1,63 @@
+{% extends 'neighborhood/base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+
+{% block content %}
+<main class="container" id="profile">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="card mt-3">
+                <div class="profile-header py-2 px-3">
+                    <p>Register</p>
+                </div>
+                <div class="auth p-5">
+                    <form class="form" action="" method="POST">
+                        {% csrf_token %}
+                        <div class="input_field">
+                            {{ form.first_name }}
+                        </div>
+                        <div class="input_field">
+                            {{ form.last_name }}
+                        </div>
+                        <div class="input_field">
+                            {{ form.username }}
+                        </div>
+                        <div class="input_field">
+                            {{ form.email }}
+                        </div>
+                        <div class="input_field">
+                            {{ form.password1 }}
+                        </div>
+                        <div class="input_field">
+                            {{ form.password2 }}
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                        <hr>
+                        <p class="my-4">Have an account? <a href="{% url 'login'%}">Log In</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</main>
+
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder = 'First name';
+    form_fields[2].placeholder = 'Last name';
+    form_fields[3].placeholder = 'Username';
+    form_fields[4].placeholder = 'Email';
+    form_fields[5].placeholder = 'Password';
+    form_fields[6].placeholder = 'Confirm password';
+
+
+    for (var field in form_fields) {
+        form_fields[field].className += 'input'
+        form_fields[field].required = true
+    }
+</script>
+{%endblock%}

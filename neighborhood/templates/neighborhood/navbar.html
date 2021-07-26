@@ -8,14 +8,20 @@
                 <li class="ms-4"><a href="{% url 'feed' %}">Feed</a></li>
                 <li class="ms-4"><a href="{% url 'businesses' %}">Businesses</a></li>
                 <li class="ms-4"><a href="{% url 'neighborhood' %}">Neighborhood</a></li>
-                <li class="ms-4 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><a href="#">Account</a>
+                <li class="ms-4 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><a href="#">Account {%if user.is_authenticated %}({{user.username}}) {% endif %}</a>
                 </li>
                 <ul class="dropdown-menu p-3">
                     <li><a href="{% url 'profile'%}"><i class="fa fa-user pe-2" aria-hidden="true"></i> Profile</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a href="#"><i class="fa fa-power-off pe-2" aria-hidden="true"></i> Logout</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout'%}"><i class="fa fa-power-off pe-2" aria-hidden="true"></i> Logout</a>
+                    </li>
+                    {% else %}
+                    <li><a href="{% url 'login'%}"><i class="fas fa-sign-in-alt pe-2"></i> Login</a>
+                    </li>
+                    {%endif%}
                 </ul>
             </ul>
         </div>
