@@ -1,3 +1,4 @@
+from django.utils import tree
 from neighborhood.views import neighborhood
 from django.db import models
 from django.contrib.auth.models import User
@@ -45,25 +46,18 @@ class Profile(models.Model):
     house = models.CharField(max_length=50)
     phase = models.CharField(max_length=50)
     phone = models.CharField(max_length=50)
-    gender = models.ForeignKey(Gender, on_delete=models.CASCADE)
+    gender = models.ForeignKey(Gender, on_delete=models.CASCADE, null=True)
     profile_picture = CloudinaryField('image')
 
-    neighborhood=models.ForeignKey(Neighborhood,on_delete=models.SET_NULL,null=True,related_name='neighbors',blank=True)
+    neighborhood = models.ForeignKey(Neighborhood,on_delete=models.SET_NULL, null=True,related_name='neighbors',blank=True)
 
     def __str__(self):
-        return f'{self.user.username} Profile'
+        return f'{self.user.username} profile'
 
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
             Profile.objects.create(user=instance)
-
-    @receiver(post_save, sender=User)
-    def save_user_profile(sender, instance, **kwargs):
-        instance.profile.save()
-
-    def save_profile(self):
-        self.user
 
     def delete_profile(self):
         self.delete()
