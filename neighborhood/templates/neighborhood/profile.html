@@ -5,6 +5,31 @@
 
 {% block content %}
 <main class="container" id="profile">
+
+
+    <!-- Modal -->
+    <form id="newPostForm" action="{%url 'businesses'%}" method="POST" enctype="multipart/form-data">
+        <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New Business</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {% csrf_token %}
+                        {% bootstrap_form edit_profile_form %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!--  -->
+
     <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
@@ -24,8 +49,10 @@
                             <li><b>Phone:</b> {{user.profile.phone}}</li>
                             <li><b>Email:</b> {{user.email}}</li>
                             <li><b>Gender:</b> {{user.profile.gender}}</li>
+                            <li><b>Neighborhood:</b> {{user.profile.neighborhood.name}}</li>
                         </ul>
-                        <a id="profileButton" class="btn btn-primary btn-sm" href="#" role="button">Edit Profile</a>
+                        <a id="profileButton" class="btn btn-primary btn-sm mb-4" href="#" role="button"
+                            data-bs-toggle="modal" data-bs-target="#newPostModal">Edit Profile</a>
                     </div>
 
                 </div>

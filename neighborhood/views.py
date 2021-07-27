@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from . import models
-from .forms import CreateUserForm, NewPostForm, NewBusinessForm
+from .forms import CreateUserForm, NewPostForm, NewBusinessForm, EditProfileForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -67,6 +67,8 @@ def neighborhood(request):
 
     current_user = request.user
     neighborhood = current_user.profile.neighborhood
+
+    
     
     title = 'Neighborhood'
     context = {
@@ -79,9 +81,19 @@ def neighborhood(request):
 @login_required(login_url='login')
 def profile(request):
 
+    if request.method == 'POST':
+        edit_profile_form = EditProfileForm(request.POST, request.FILES, instance=request.user.profile)
+        if edit_profile_form.is_valid():
+            edit_profile_form.instance.user = request.user
+            edit_profile_form.save()
+
+    else:
+        edit_profile_form = EditProfileForm()
+
     title = 'Profile'
     context = {
         'title': title,
+        'edit_profile_form': edit_profile_form,
     }
 
     return render(request, 'neighborhood/profile.html', context)
