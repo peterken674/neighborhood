@@ -22,6 +22,7 @@ def feed(request):
     context = {
         'title': title,
         'posts': posts,
+        'new_post_form': new_post_form,
     }
 
     return render(request, 'neighborhood/feed.html',context)

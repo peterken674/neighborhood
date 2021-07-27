@@ -6,12 +6,12 @@
 {% block content %}
 <main class="container" id="feed">
     <div id="neighborhoodName" class="my-3 p-2 card">Gallow Estate</div>
-    <a id="newPostBtn" class="btn btn-primary btn-sm " role="button" data-bs-toggle="modal"
-        data-bs-target="#newProjectModal"><i class="fa fa-pencil" aria-hidden="true"></i> New Post</a>
+    <button id="newPostBtn" class="btn btn-primary btn-sm " role="button" data-bs-toggle="modal"
+        data-bs-target="#newPostModal"><i class="fa fa-pencil" aria-hidden="true"></i> New Post</button>
 
     <!-- Modal -->
     <form id="newPostForm" action="{%url 'feed'%}" method="POST" enctype="multipart/form-data">
-        <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
