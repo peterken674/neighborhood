@@ -316,8 +316,8 @@ footer {
 #neighborhood .card #neighborhoodCover img {
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: top !important;
-     object-position: top !important;
+  -o-object-position: bottom !important;
+     object-position: bottom !important;
 }
 
 #neighborhood .card #neighborhoodText {
@@ -431,5 +431,21 @@ footer {
   -webkit-box-shadow: -3px 3px 10px -8px #5a5a5a;
           box-shadow: -3px 3px 10px -8px #5a5a5a;
   outline: none;
+}
+
+#changeNeighborhood {
+  background-color: transparent;
+  color: #E75E88;
+  height: 2rem;
+  font-weight: 700;
+  padding: 0 0 1rem 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  border-radius: 0;
+}
+
+#changeNeighborhood:hover {
+  border-bottom: 3px solid #E75E88;
 }
 /*# sourceMappingURL=style.css.map */

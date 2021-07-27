@@ -50,6 +50,11 @@
                             <li><b>Email:</b> {{user.email}}</li>
                             <li><b>Gender:</b> {{user.profile.gender}}</li>
                             <li><b>Neighborhood:</b> {{user.profile.neighborhood.name}}</li>
+                            <li><b>Change Neighborhood</b>
+                                <form action="" method="post" class="d-inline">{% csrf_token %}
+                                    {% bootstrap_form change_neighborhood_form %}
+                                <button id="changeNeighborhood" class="btn btn-primary" type="submit">Submit</button></form>
+                            </li>
                         </ul>
                         <a id="profileButton" class="btn btn-primary btn-sm mb-4" href="#" role="button"
                             data-bs-toggle="modal" data-bs-target="#newPostModal">Edit Profile</a>

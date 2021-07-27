@@ -54,7 +54,7 @@ class Profile(models.Model):
     phase = models.CharField(max_length=50)
     phone = models.CharField(max_length=50)
     gender = models.ForeignKey(Gender, on_delete=models.CASCADE, null=True)
-    profile_picture = CloudinaryField('image', default='image/upload/v1626430054/default_zogkvr.png')
+    profile_picture = CloudinaryField('images', default='image/upload/v1626430054/default_zogkvr.png')
 
     neighborhood = models.ForeignKey(Neighborhood,on_delete=models.SET_NULL, null=True,related_name='neighbors',blank=True)
 

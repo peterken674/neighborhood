@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from django.db.models import fields
 from django.forms import ModelForm
 from .models import Post, Business, Profile
 
@@ -26,3 +27,8 @@ class EditProfileForm(ModelForm):
     class Meta:
         model = Profile
         exclude = ['user']
+
+class ChangeNeighborhoodForm(ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['neighborhood']
