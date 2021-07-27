@@ -80,8 +80,8 @@ class Business(models.Model):
     phone = models.CharField(max_length=50)
     start_day = models.CharField(max_length=50)
     end_day = models.CharField(max_length=50)
-    open_time = models.TimeField()
-    close_time = models.TimeField()
+    open_time = models.CharField(max_length=50)
+    close_time = models.CharField(max_length=50)
     bs_image = CloudinaryField('images', default='image/upload/v1627341811/company_default_qb4ili.png')
 
     user=models.ForeignKey(Profile, on_delete=models.CASCADE) 

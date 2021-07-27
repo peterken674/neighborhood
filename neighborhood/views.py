@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from . import models
-from .forms import CreateUserForm, NewPostForm
+from .forms import CreateUserForm, NewPostForm, NewBusinessForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -39,12 +39,25 @@ def feed(request):
 @login_required(login_url='login')
 def businesses(request):
     current_user = request.user.profile
+
+    if request.method == 'POST':
+        new_business_form = NewBusinessForm(request.POST)
+        if new_business_form.is_valid():
+            new_business_form.instance.user = current_user
+            new_business_form.instance.neighborhood = current_user.neighborhood
+            new_business_form.save()
+
+            return redirect('businesses')
+    else:
+        new_business_form = NewBusinessForm()
+
     businesses = models.Business.objects.filter(neighborhood=current_user.neighborhood)
 
     title = 'Businesses'
     context = {
         'title': title,
         'businesses':businesses,
+        'new_business_form':new_business_form,
     }
 
     return render(request, 'neighborhood/businesses.html', context)
