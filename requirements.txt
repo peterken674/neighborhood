@@ -2,12 +2,13 @@ asgiref==3.4.1
 beautifulsoup4==4.9.3
 certifi==2021.5.30
 cloudinary==1.26.0
-decouple==0.0.7
 dj-database-url==0.5.0
 Django==3.2.5
 django-bootstrap-v5==1.0.4
 django-heroku==0.3.1
+gunicorn==20.1.0
 psycopg2==2.9.1
+python-decouple==3.4
 pytz==2021.1
 six==1.16.0
 soupsieve==2.2.1
