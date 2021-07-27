@@ -13,8 +13,16 @@ class Neighborhood(models.Model):
     name = models.CharField(max_length=50)
     location = models.CharField(max_length=50)
     description = models.TextField()
+    manager_name = models.CharField(max_length=100, blank=True)
+    manager_number = models.CharField(max_length=20, blank=True)
+    manager_email = models.EmailField(blank=True)
+    hospital_name = models.CharField(max_length=100, blank=True)
     hospital_number = models.CharField(max_length=20, blank=True)
+    hospital_email = models.EmailField(blank=True)
+    police_name = models.CharField(max_length=100, blank=True)
     police_number = models.CharField(max_length=20, blank=True)
+    police_email = models.EmailField(blank=True)
+    hood_pic = CloudinaryField('images', default='image/upload/v1627343010/neighborhood1_cj2fyx.jpg')
 
     @property
     def occupants_count(self):

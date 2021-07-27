@@ -40,9 +40,13 @@ def businesses(request):
 @login_required(login_url='login')
 def neighborhood(request):
 
+    current_user = request.user
+    neighborhood = current_user.profile.neighborhood
+    
     title = 'Neighborhood'
     context = {
         'title': title,
+        'neighborhood': neighborhood,
     }
 
     return render(request, 'neighborhood/neighborhood.html', context)
