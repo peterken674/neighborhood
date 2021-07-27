@@ -14,16 +14,16 @@
                 </div>
                 <div class="profile-body p-3">
                     <div class="profile-pic mt-4">
-                        <img src="{% static 'img/profile.jpg'%}" alt="Profile pic" class="img-fluid">
+                        <img src="{{user.profile.profile_picture.url}}" alt="Profile pic" class="img-fluid">
                     </div>
                     <div>
                         <ul class="details">
-                            <li><b>Name:</b> James Doet</li>
-                            <li><b>House:</b> A7</li>
-                            <li><b>Phase:</b> 6</li>
-                            <li><b>Phone:</b> +254 703 344 354</li>
-                            <li><b>Email:</b> jamesd@mail.com</li>
-                            <li><b>Gender:</b> Male</li>
+                            <li><b>Name:</b> {{user.first_name}} {{user.last_name}}</li>
+                            <li><b>House:</b> {{user.profile.house}}</li>
+                            <li><b>Phase:</b> {{user.profile.phase}}</li>
+                            <li><b>Phone:</b> {{user.profile.phone}}</li>
+                            <li><b>Email:</b> {{user.email}}</li>
+                            <li><b>Gender:</b> {{user.profile.gender}}</li>
                         </ul>
                         <a id="profileButton" class="btn btn-primary btn-sm" href="#" role="button">Edit Profile</a>
                     </div>

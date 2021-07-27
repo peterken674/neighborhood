@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from . import models
-from .forms import CreateUserForm
+from .forms import CreateUserForm, NewPostForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -15,6 +15,8 @@ def index(request):
 def feed(request):
     current_user = request.user.profile
     posts = models.Post.objects.filter(hood=current_user.neighborhood)
+
+    new_post_form = NewPostForm()
 
     title = 'Feed'
     context = {
